@@ -1,0 +1,52 @@
+<h1 class="text-center" > WELCOME TO FOODBOOK </h1>
+<div class="container">
+  <h2>DISH</h2>
+  <section>
+    <% @dishs.each do |ds| %>
+      <ul class="col-sm-4 list-unstyled">
+        <li class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+              <%= ds.name %>
+            </h2>
+          </div>
+          <ul class="panel-body list-unstyled text-center">
+            <li class="col-sm-6">
+              <%= ds.price %> $
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </li>
+            <li class="col-sm-6">
+              <%= ds.origin %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    <% end %>
+  </section>
+</div>
+
+<div class="container">
+  <h2>MEAL</h2>
+  <section>
+    <% @meals.each do |ml| %>
+      <ul class="col-sm-6 list-unstyled">
+        <li class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title"><%= ml.name %></h2>
+          </div>
+          <ul class="panel-body list-unstyled text-center">
+            <li class="col-sm-4">
+              <%= ml.price %> $
+            </li>
+            <li class="col-sm-4">
+              <%= ml.restaurant %>
+            </li>
+            <li class="col-sm-4">
+              <%= ml.city %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    <% end %>
+  </section>
+</div>

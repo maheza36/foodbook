@@ -1,0 +1,23 @@
+<div class="container">
+<%= form_for(:meal, url: meals_path)  do |f| %>
+  <div class="from-group">
+    <%= f.label :Name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="from-group">
+    <%= f.label :Price %>
+    <%= f.number_field :price, class: 'form-control' %>
+  </div>
+  <div class="from-group">
+    <%= f.label :Restaurant %>
+    <%= f.text_field :restaurant, class: 'form-control' %>
+  </div>
+  <div class="from-group">
+    <%= f.label :City %>
+    <%= f.text_field :city, class: 'form-control' %>
+  </div>
+  <%= f.submit "Create", class: "btn btn-primary" , style: "margin-top:20px;"%>
+
+<% end %>
+
+</div>
